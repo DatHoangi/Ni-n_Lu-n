@@ -47,19 +47,67 @@
         <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
+        <!-- Top Header -->
+        <div class="top-header-bg">
+            <div class="container">
+                <div class="top-header">
+                    <!-- Address -->
+                    <div class="top-header-address">
+                        <img
+                            src="./assets/icon/location.svg"
+                            alt="Location"
+                            class="icon__location"
+                        />
+                        <a
+                            href="Rezilla, 18 Grattan St, Brooklyn"
+                            class="top-header-address__desc"
+                        >
+                            Rezilla, 18 Grattan St, Brooklyn
+                        </a>
+                    </div>
+                    <!-- Phone and email -->
+                    <div class="top-header-infomation">
+                        <div class="top-header-infomation__phone">
+                            <img
+                                src="./assets/icon/phone.svg"
+                                alt="Phone"
+                                class="icon__phone"
+                            />
+                            <a href="tel:+12062142298" class="top-header-phone">
+                                +1 206-214-2298
+                            </a>
+                        </div>
+                        <div class="top-header-infomation__gmail">
+                            <img
+                                src="./assets/icon/email.svg"
+                                alt=""
+                                class="icon__gmail"
+                            />
+                            <a
+                                href="mailto:support@rezilla.com"
+                                class="top-header-gmail"
+                            >
+                                support@rezilla.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Header -->
-        <header id="header"></header>
+        <header id="header" class="header"></header>
         <script>
             load("#header", "./template/header.html");
         </script>
+        <div class="container">
+            <!-- Main -->
+            <h1>Home page</h1>
 
-        <!-- Main -->
-        <h1>Home page</h1>
-
-        <!-- Footer -->
-        <footer id="footer"></footer>
-        <script>
-            load("#footer", "./template/footer.html");
-        </script>
+            <!-- Footer -->
+            <footer id="footer"></footer>
+            <script>
+                load("#footer", "./template/footer.html");
+            </script>
+        </div>
     </body>
 </html>

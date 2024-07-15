@@ -1,0 +1,31 @@
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.top-header-bg {
+  background: #3a0ca3;
+}
+.top-header-address {
+  gap: 8px;
+}
+.top-header-address__desc, .top-header-phone, .top-header-gmail {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 22px;
+  color: White;
+}
+.top-header-address, .top-header-infomation, .top-header-infomation__gmail, .top-header-infomation__phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-header-infomation {
+  gap: 30px;
+}
+.top-header-infomation__gmail, .top-header-infomation__phone {
+  gap: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,42 @@
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+    &-bg {
+        background: #3a0ca3;
+    }
+
+    &-address {
+        gap: 8px;
+    }
+
+    &-address__desc,
+    &-phone,
+    &-gmail {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 22px;
+        color: White;
+    }
+
+    &-address,
+    &-infomation,
+    &-infomation__gmail,
+    &-infomation__phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-infomation {
+        gap: 30px;
+    }
+
+    &-infomation__gmail,
+    &-infomation__phone {
+        gap: 10px;
+    }
+}
+
