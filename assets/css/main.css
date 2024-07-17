@@ -1363,7 +1363,7 @@ select {
 }
 @media (max-width: 1199.98px) {
   .logo {
-    margin-left: 0px;
+    margin-left: auto;
   }
 }
 @media (max-width: 991.98px) {
