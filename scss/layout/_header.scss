@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemsCenter {
     display: flex;
     align-items: center;
@@ -11,6 +13,13 @@
 
     &-bg {
         background: #3a0ca3;
+        @include abstracts.breakpoint(sm) {
+            display: none;
+        }
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
     }
 
     &-address {
@@ -50,11 +59,41 @@
 
 .top-bar {
     @extend %flexItemsCenter;
-    padding-top: 15px;
+    padding: 15px 0;
+    @include abstracts.breakpoint(sm) {
+        padding: 20px 0;
+    }
+
+    &__more {
+        display: none;
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
+        }
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__more-moblie {
+        display: none;
+        @include abstracts.breakpoint(md) {
+            margin-left: auto;
+        }
+
+        @include abstracts.breakpoint(md) {
+            display: block;
+        }
+    }
 }
 
 .navbar {
     margin-right: 129px;
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
 
     &__list {
         @extend %flexItemsCenter;
@@ -76,9 +115,29 @@
 .top-act {
     margin-left: auto;
 
+    @include abstracts.breakpoint(xl) {
+        display: none;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        display: block;
+    }
+
+    @include abstracts.breakpoint(md) {
+        display: none;
+    }
+
+    @include abstracts.breakpoint(sm) {
+        display: none;
+    }
+
     &__group {
         @extend %flexItemsCenter;
         justify-content: center;
+
+        @include abstracts.breakpoint(sm) {
+            display: none;
+        }
     }
 
     &__btn {

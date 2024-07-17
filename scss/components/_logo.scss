@@ -1,7 +1,21 @@
+@use "../abstracts";
+
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @include abstracts.breakpoint(xl) {
+        margin-left: 0px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        margin-left: 39px;
+    }
+
+    @include abstracts.breakpoint(md) {
+        margin-left: 0px;
+    }
 
     &-bg {
         display: flex;
