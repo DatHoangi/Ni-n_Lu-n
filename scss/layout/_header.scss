@@ -1,8 +1,12 @@
+%flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
+
 // Top header
 .top-header {
-    display: flex;
+    @extend %flexItemsCenter;
     justify-content: space-between;
-    align-items: center;
     height: 40px;
 
     &-bg {
@@ -26,9 +30,8 @@
     &-infomation,
     &-infomation__gmail,
     &-infomation__phone {
-        display: flex;
+        @extend %flexItemsCenter;
         justify-content: center;
-        align-items: center;
     }
 
     &-infomation {
@@ -46,8 +49,7 @@
 }
 
 .top-bar {
-    display: flex;
-    align-items: center;
+    @extend %flexItemsCenter;
     padding-top: 15px;
 }
 
@@ -55,8 +57,7 @@
     margin-right: 129px;
 
     &__list {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
     }
 
     &__link {
@@ -76,17 +77,16 @@
     margin-left: auto;
 
     &__group {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         justify-content: center;
     }
 
     &__btn {
-        display: flex;
+        @extend %flexItemsCenter;
         justify-content: center;
-        align-items: center;
         gap: 8px;
         padding: 15px 26px;
+        color: var(--text-color);
     }
 
     &__btn--single {
