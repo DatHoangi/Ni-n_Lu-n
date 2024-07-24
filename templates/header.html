@@ -2,7 +2,7 @@
     <!-- Top-bar -->
     <div class="top-bar">
         <!-- More -->
-        <button class="top-bar__more">
+        <button class="top-bar__more js-toggle" toggle-target="#navbar">
             <img
                 src="./assets/icon/more.svg"
                 alt=""
@@ -10,25 +10,40 @@
             />
         </button>
 
-        <nav class="navbar">
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar hide">
+            <!-- Logo -->
+            <a href="./" class="logo d-none d-lg-flex">
+                <div class="logo-bg">
+                    <img
+                        src="./assets/icon/logo.svg"
+                        alt="Rezilla"
+                        class="logo__img"
+                    />
+                </div>
+                <h1 class="logo__title">Rezilla</h1>
+            </a>
+
             <ul class="navbar__list">
-                <li>
-                    <a href="" class="navbar__link">Home</a>
+                <li class="navbar__li">
+                    <a href="#!" class="navbar__link">Home</a>
                 </li>
-                <li>
-                    <a href="" class="navbar__link">About</a>
+                <li class="navbar__li">
+                    <a href="#!" class="navbar__link">About</a>
                 </li>
-                <li>
-                    <a href="" class="navbar__link">Listings</a>
+                <li class="navbar__li">
+                    <a href="#!" class="navbar__link">Listings</a>
                 </li>
-                <li>
-                    <a href="" class="navbar__link">Services</a>
+                <li class="navbar__li">
+                    <a href="#!" class="navbar__link">Services</a>
                 </li>
-                <li>
-                    <a href="" class="navbar__link">Blogs</a>
+                <li class="navbar__li">
+                    <a href="#!" class="navbar__link">Blogs</a>
                 </li>
             </ul>
         </nav>
+
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
         <!-- Logo -->
         <a href="./" class="logo">
             <div class="logo-bg">
@@ -42,7 +57,7 @@
         </a>
 
         <!-- More -->
-        <button class="top-bar__more-moblie">
+        <button class="top-bar__more-moblie js-toggle" toggle-target="#navbar">
             <img
                 src="./assets/icon/more.svg"
                 alt=""

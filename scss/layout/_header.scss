@@ -92,11 +92,54 @@
     margin-right: 129px;
 
     @include abstracts.breakpoint(lg) {
-        display: none;
+        display: block;
+        position: fixed;
+        inset: 6.7% 40% 0 0;
+        background: #fff;
+        padding: 20px 0;
+        z-index: 9;
+
+        translate: -100%;
+        transition: translate 0.5s;
+
+        &.show {
+            translate: 0;
+        }
+
+        // Dùng + hoặc ~ dùng ~ để có thẻ chen vào giữa navbar và overlay vẫn chạy được
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity, visibility;
+        transition-duration: 0.5s;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 8;
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
     }
 
     &__list {
         @extend %flexItemsCenter;
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px 0 0 13px;
+        }
+    }
+
+    &__li {
+        @include abstracts.breakpoint(lg) {
+            padding: 10px;
+        }
     }
 
     &__link {
@@ -105,6 +148,9 @@
         line-height: 24px;
         padding: 13px 16px;
         border-radius: 999px;
+
+        @include abstracts.breakpoint(lg) {
+        }
     }
 
     &__link:hover {
