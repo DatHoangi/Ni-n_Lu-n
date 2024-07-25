@@ -102,6 +102,14 @@
         translate: -100%;
         transition: translate 0.5s;
 
+        @include abstracts.breakpoint(md) {
+            inset: 0 30% 0 0;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            inset: 0 20% 0 0;
+        }
+
         &.show {
             translate: 0;
         }
