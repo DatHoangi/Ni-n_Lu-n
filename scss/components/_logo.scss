@@ -5,15 +5,15 @@
     align-items: center;
     gap: 8px;
 
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
         margin-left: auto;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         margin-left: 39px;
     }
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         margin-left: 0px;
     }
 
