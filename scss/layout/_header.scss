@@ -55,6 +55,14 @@
 
 .header {
     background: #fff;
+    background: #fff;
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+    &-inner {
+        width: 1240px;
+        margin: 0 auto;
+    }
 }
 
 .top-bar {

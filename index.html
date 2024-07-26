@@ -102,7 +102,8 @@
         <div class="container">
             <!-- Hero -->
             <section class="hero">
-                <div class="container hero-container">
+                <div class="hero__inner">
+                    <!-- Hero content -->
                     <section class="hero__content">
                         <a href="" class="hero__place">REAL ESTATE</a>
                         <h1 class="hero__heading">
@@ -113,14 +114,98 @@
                             vestibulum. Integer a dolor eu sapien sodales
                             vulputate ac in purus.
                         </p>
-                        <img src="" alt="" class="hero__img" />
+                        <img
+                            src="./assets/img/hero1.png"
+                            alt=""
+                            class="hero__img"
+                        />
+                        <img
+                            src="./assets/icon/hero1.svg"
+                            alt=""
+                            class="hero__decor hero__decor-inner"
+                        />
+                        <img
+                            src="./assets/icon/hero2.svg"
+                            alt=""
+                            class="hero__decor hero__decor-img"
+                        />
                     </section>
-                    <section class="hero__form">
-                        <div class="hero__for">
-                            <h2 class="hero__for-price">For Sale</h2>
-                            <h2 class="hero__for-price">For Rent</h2>
-                        </div>
-                    </section>
+                    <!-- Hero form -->
+                    <div class="hero__form">
+                        <form action="" class="hero__form-infomation">
+                            <div class="hero__form-group">
+                                <label
+                                    for="for-sale"
+                                    class="hero__form-label hero__form-label-sale"
+                                >
+                                    For Sale
+                                </label>
+                                <label for="for-rent" class="hero__form-label">
+                                    For Rent
+                                </label>
+                            </div>
+
+                            <div class="hero__form-section">
+                                <input
+                                    type="text"
+                                    id="for-sale"
+                                    placeholder="New York, San Francisco, etc"
+                                    class="hero__form-input"
+                                    required
+                                />
+                                
+                            </div>
+                            <div class="hero__form-section">
+                                <select
+                                    id="property-type"
+                                    name="property-type"
+                                    class="hero__form-type"
+                                >
+                                    <option value="" disabled selected>
+                                        Select Property Type
+                                    </option>
+                                    <option value="house">House</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="condo">Condo</option>
+                                    <option value="land">Land</option>
+                                </select>
+                            </div>
+
+                            <div class="hero__form-section">
+                                <select
+                                    id="rooms"
+                                    name="rooms"
+                                    class="hero__form-type"
+                                >
+                                    <option value="" disabled selected>
+                                        Select Rooms
+                                    </option>
+                                    <option value="1">1 Rooms</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4 Rooms</option>
+                                </select>
+                            </div>
+                            <div class="hero__form-search">
+                                <img
+                                    src="./assets/icon/search.svg"
+                                    alt=""
+                                    class="hero__form-icon"
+                                />
+                                <span class="hero__from-advance">
+                                    Advance Search
+                                </span>
+                            </div>
+                            <div class="hero__form-search-btn">
+                                <img
+                                    src="./assets/icon/search1.svg"
+                                    alt=""
+                                    class="hero__from-icon-search"
+                                />
+                                <button class="btn hero-search-btn">Search</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
 

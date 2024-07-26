@@ -57,3 +57,5 @@ function initJsToggle() {
 document.addEventListener("DOMContentLoaded", (event) => {
     initJsToggle();
 });
+
+

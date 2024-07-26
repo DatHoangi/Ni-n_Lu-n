@@ -45,3 +45,20 @@ select {
 .icon {
     filter: var(--icon-color);
 }
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 19px 30px;
+    border-radius: 30px;
+
+    background: #f8f8fb;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    user-select: none;
+
+    cursor: pointer;
+}
