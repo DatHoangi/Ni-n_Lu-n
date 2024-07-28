@@ -1,0 +1,28 @@
+.social {
+    margin-top: 68px;
+
+    &__desc {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 24px;
+        color: #808080;
+    }
+
+    &__network {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 15px;
+    }
+
+    &__network-decor {
+        position: absolute;
+        top: -238px;
+        left: 90px;
+    }
+}
