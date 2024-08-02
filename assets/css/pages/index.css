@@ -7,6 +7,16 @@
   align-items: self-end;
   justify-content: space-between;
 }
+@media (max-width: 991.98px) {
+  .hero__inner {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.hero__content {
+  text-align: left;
+}
 .hero__place {
   font-weight: 500;
   size: 1.94rem;
@@ -19,6 +29,15 @@
   width: 580px;
   font-weight: 600;
   font-size: 5.73rem;
+  line-height: 65px;
+}
+@media (max-width: 575.98px) {
+  .hero__heading {
+    margin-top: 20px;
+    width: 333px;
+    font-size: 3.98rem;
+    line-height: 47px;
+  }
 }
 .hero__desc {
   margin-top: 40px;
@@ -27,25 +46,89 @@
   line-height: 26px;
   color: #808080;
 }
+@media (max-width: 575.98px) {
+  .hero__desc {
+    width: 333px;
+    font-size: 1.33rem;
+    line-height: 22px;
+  }
+}
 .hero__img {
+  position: relative;
   width: 540px;
   height: 340px;
   margin-top: 40px;
   border-radius: 20px;
 }
+@media (max-width: 575.98px) {
+  .hero__img {
+    width: 333px;
+    height: 200px;
+    object-fit: contain;
+  }
+}
 .hero__decor {
   position: absolute;
 }
 .hero__decor-inner {
+  height: 902px;
   top: 75px;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
 }
+@media (max-width: 1199.98px) {
+  .hero__decor-inner {
+    width: 1000px;
+    height: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  .hero__decor-inner {
+    width: 800px;
+    height: 940px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__decor-inner {
+    width: 700px;
+    height: 920px;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero__decor-inner {
+    width: 394px;
+    height: 894px;
+  }
+}
 .hero__decor-img {
-  top: 480px;
-  left: 662px;
+  top: 69%;
+  left: 44%;
   z-index: -1;
+  height: auto;
+}
+@media (max-width: 1199.98px) {
+  .hero__decor-img {
+    left: 55%;
+  }
+}
+@media (max-width: 991.98px) {
+  .hero__decor-img {
+    left: 78%;
+    top: 79%;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__decor-img {
+    left: 80%;
+    top: 71%;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero__decor-img {
+    left: 80%;
+    top: 73%;
+  }
 }
 .hero__form {
   position: relative;
@@ -54,6 +137,11 @@
   box-shadow: 10px 30px 50px 0px rgba(0, 0, 0, 0.0509803922);
   background: #fff;
   border-radius: 30px;
+}
+@media (max-width: 991.98px) {
+  .hero__form {
+    margin-top: 50px;
+  }
 }
 .hero__form::after {
   content: "";
@@ -68,6 +156,11 @@
   width: 420px;
   height: 582px;
   padding: 0 40px 60px 40px;
+}
+@media (max-width: 1199.98px) {
+  .hero__form-infomation {
+    width: 355px;
+  }
 }
 .hero__form-group {
   display: flex;
@@ -157,6 +250,11 @@
   position: absolute;
   left: 153px;
 }
+@media (max-width: 1199.98px) {
+  .hero__from-icon-search {
+    left: 123px;
+  }
+}
 .hero-search-btn {
   width: 340px;
   height: 60px;
@@ -173,6 +271,12 @@
   justify-content: center;
   gap: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__evaluate {
+    margin-top: 50px;
+    order: 2;
+  }
+}
 .form__evaluate-customers {
   display: flex;
   align-items: center;
@@ -184,6 +288,11 @@
   background: #fff;
   border-radius: 50px;
   box-shadow: 10px 30px 50px 0px rgba(0, 0, 0, 0.0509803922);
+}
+@media (max-width: 767.98px) {
+  .form__evaluate-customers {
+    width: 360px;
+  }
 }
 .form__evaluate-customers-top {
   width: 360px;
@@ -258,6 +367,11 @@
 .social {
   margin-top: 68px;
 }
+@media (max-width: 767.98px) {
+  .social {
+    order: 1;
+  }
+}
 .social__desc {
   display: flex;
   justify-content: center;
@@ -268,17 +382,49 @@
   line-height: 24px;
   color: #808080;
 }
+.social__network-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+}
 .social__network {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 15px;
+  padding: 0 15px;
+  height: 90px;
+  border-radius: 13px;
+}
+.social__network:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .social__network-decor {
-  position: absolute;
+  position: relative;
   top: -238px;
   left: 90px;
+}
+@media (max-width: 767.98px) {
+  .social__network-decor {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .social__network-decor {
+    top: -270px;
+    left: 30px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767.98px) {
+  .inner {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

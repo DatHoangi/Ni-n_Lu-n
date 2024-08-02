@@ -1,6 +1,11 @@
+@use "../abstracts";
+
 .social {
     margin-top: 68px;
 
+    @include abstracts.screen(md) {
+        order: 1;
+    }
     &__desc {
         display: flex;
         justify-content: center;
@@ -12,17 +17,49 @@
         color: #808080;
     }
 
+    &__network-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 60px;
+
+        @include abstracts.screen(lg) {
+        }
+    }
+
     &__network {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 60px 15px;
+        padding: 0 15px;
+        height: 90px;
+        border-radius: 13px;
+    }
+
+    &__network:hover {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     }
 
     &__network-decor {
-        position: absolute;
+        position: relative;
         top: -238px;
         left: 90px;
+
+        @include abstracts.screen(md) {
+            display: none;
+        }
+        @include abstracts.screen(lg) {
+            top: -270px;
+            left: 30px;
+        }
+    }
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    @include abstracts.screen(md) {
+        flex-direction: column;
     }
 }

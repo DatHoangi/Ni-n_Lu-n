@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .form__evaluate {
     margin-top: 60px;
     display: flex;
@@ -5,6 +7,10 @@
     justify-content: center;
     gap: 30px;
 
+    @include abstracts.screen(md) {
+        margin-top: 50px;
+        order: 2;
+    }
     &-customers {
         display: flex;
         align-items: center;
@@ -16,6 +22,10 @@
         background: #fff;
         border-radius: 50px;
         box-shadow: 10px 30px 50px 0px #0000000d;
+
+        @include abstracts.screen(md) {
+            width: 360px;
+        }
     }
 
     &-customers-top {

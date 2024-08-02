@@ -1,3 +1,4 @@
+@use "../abstracts";
 .hero {
     margin-top: 89px;
 
@@ -5,6 +6,16 @@
         display: flex;
         align-items: self-end;
         justify-content: space-between;
+
+        @include abstracts.screen(lg) {
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        text-align: left;
     }
 
     &__place {
@@ -19,6 +30,13 @@
         width: 580px;
         font-weight: 600;
         font-size: 5.73rem;
+        line-height: 65px;
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+            width: 333px;
+            font-size: 3.98rem;
+            line-height: 47px;
+        }
     }
     &__desc {
         margin-top: 40px;
@@ -26,13 +44,24 @@
         font-weight: 400;
         line-height: 26px;
         color: #808080;
+        @include abstracts.screen(sm) {
+            width: 333px;
+            font-size: 1.33rem;
+            line-height: 22px;
+        }
     }
 
     &__img {
+        position: relative;
         width: 540px;
         height: 340px;
         margin-top: 40px;
         border-radius: 20px;
+        @include abstracts.screen(sm) {
+            width: 333px;
+            height: 200px;
+            object-fit: contain;
+        }
     }
 
     &__decor {
@@ -40,16 +69,52 @@
     }
 
     &__decor-inner {
+        height: 902px;
         top: 75px;
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
+
+        @include abstracts.screen(xl) {
+            width: 1000px;
+            height: 970px;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 800px;
+            height: 940px;
+        }
+
+        @include abstracts.screen(md) {
+            width: 700px;
+            height: 920px;
+        }
+        @include abstracts.screen(sm) {
+            width: 394px;
+            height: 894px;
+        }
     }
 
     &__decor-img {
-        top: 480px;
-        left: 662px;
+        top: 69%;
+        left: 44%;
         z-index: -1;
+        height: auto;
+        @include abstracts.screen(xl) {
+            left: 55%;
+        }
+        @include abstracts.screen(lg) {
+            left: 78%;
+            top: 79%;
+        }
+        @include abstracts.screen(md) {
+            left: 80%;
+            top: 71%;
+        }
+        @include abstracts.screen(sm) {
+            left: 80%;
+            top: 73%;
+        }
     }
 
     // Form
@@ -61,6 +126,10 @@
         box-shadow: 10px 30px 50px 0px #0000000d;
         background: #fff;
         border-radius: 30px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 50px;
+        }
     }
 
     &__form::after {
@@ -77,6 +146,10 @@
         width: 420px;
         height: 582px;
         padding: 0 40px 60px 40px;
+
+        @include abstracts.screen(xl) {
+            width: 355px;
+        }
     }
 
     &__form-group {
@@ -176,6 +249,10 @@
     &__from-icon-search {
         position: absolute;
         left: 153px;
+
+        @include abstracts.screen(xl) {
+            left: 123px;
+        }
     }
 
     &-search-btn {
