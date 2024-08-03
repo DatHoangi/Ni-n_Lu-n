@@ -62,3 +62,27 @@ select {
 
     cursor: pointer;
 }
+
+.title {
+    font-weight: 500;
+    size: 1.94rem;
+    line-height: 29.1px;
+    letter-spacing: 0.15em;
+    color: #4361ee;
+}
+
+.heading {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 3.98rem;
+    line-height: 47px;
+    color: #2b2b2b;
+}
+
+.desc {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 26px;
+    color: #808080;
+}
