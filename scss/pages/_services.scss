@@ -1,0 +1,100 @@
+@use "../abstracts";
+
+.services {
+    margin-top: 200px;
+    padding: 100px 0 137px;
+
+    background: rgba(212, 212, 212, 0.3);
+
+    &-top {
+        text-align: center;
+    }
+
+    &-content__title {
+        color: #2b2b2b;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+            line-height: 24px;
+        }
+    }
+
+    &-content__heading {
+        @include abstracts.screen(sm) {
+            font-size: 2.76rem;
+            line-height: 41.4px;
+        }
+    }
+
+    &-list {
+        margin-top: 70px;
+        display: flex;
+        gap: 50px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &-item {
+        text-align: center;
+        padding: 60px;
+        border-radius: 30px;
+        background: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 0.6px solid #ffffff;
+
+        @include abstracts.screen(sm) {
+            padding: 40px 45px;
+        }
+    }
+
+    &-item:hover {
+        cursor: pointer;
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &-icon__bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        width: 90px;
+        height: 90px;
+        background: #4361ee;
+        border-radius: 50%;
+
+        @include abstracts.screen(sm) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &-icon {
+        @include abstracts.screen(sm) {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &-inner__title {
+        letter-spacing: normal;
+        color: #2b2b2b;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+            line-height: 24px;
+        }
+    }
+
+    &-inner__desc {
+        margin-top: 20px;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.33rem;
+            line-height: 22px;
+        }
+    }
+}

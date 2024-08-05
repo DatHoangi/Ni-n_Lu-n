@@ -223,6 +223,7 @@
     }
 
     &-view__more {
+        display: none;
         margin: 60px auto;
         font-weight: 500;
         font-size: 1.6rem;
@@ -230,5 +231,8 @@
         background: transparent;
         border: 1px solid #3a0ca3;
         color: #3a0ca3;
+        @include abstracts.screen(md) {
+            display: flex;
+        }
     }
 }
