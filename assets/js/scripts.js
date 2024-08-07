@@ -60,65 +60,104 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 // Scroll ngang
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     // Lấy phần tử danh sách cuộn ngang
-    const checkoutList = document.querySelector('.checkout-list');
+    const checkoutList = document.querySelector(".checkout-list");
 
     let isDragging = false; // Biến để theo dõi trạng thái kéo chuột
     let startX; // Vị trí chuột khi bắt đầu kéo
     let scrollLeft; // Vị trí cuộn ngang khi bắt đầu kéo
 
+    // Hàm kiểm tra kích thước màn hình và bật/tắt chức năng kéo chuột
+    function checkWidth() {
+        if (window.innerWidth > 768) {
+            enableDragging();
+        } else {
+            disableDragging();
+        }
+    }
+
+    // Hàm kích hoạt chức năng kéo chuột
+    function enableDragging() {
+        // Xử lý sự kiện khi nhấn chuột xuống
+        checkoutList.addEventListener("mousedown", handleMouseDown);
+        checkoutList.addEventListener("mouseleave", handleMouseLeave);
+        checkoutList.addEventListener("mouseup", handleMouseUp);
+        checkoutList.addEventListener("mousemove", handleMouseMove);
+
+        // Xử lý sự kiện cảm ứng trên các thiết bị di động
+        checkoutList.addEventListener("touchstart", handleTouchStart);
+        checkoutList.addEventListener("touchend", handleTouchEnd);
+        checkoutList.addEventListener("touchmove", handleTouchMove);
+    }
+
+    // Hàm tắt chức năng kéo chuột
+    function disableDragging() {
+        // Xóa các sự kiện kéo chuột và cảm ứng
+        checkoutList.removeEventListener("mousedown", handleMouseDown);
+        checkoutList.removeEventListener("mouseleave", handleMouseLeave);
+        checkoutList.removeEventListener("mouseup", handleMouseUp);
+        checkoutList.removeEventListener("mousemove", handleMouseMove);
+        checkoutList.removeEventListener("touchstart", handleTouchStart);
+        checkoutList.removeEventListener("touchend", handleTouchEnd);
+        checkoutList.removeEventListener("touchmove", handleTouchMove);
+    }
+
     // Xử lý sự kiện khi nhấn chuột xuống
-    checkoutList.addEventListener('mousedown', (e) => {
-        isDragging = true; // Đặt trạng thái kéo chuột là đúng
-        startX = e.pageX - checkoutList.offsetLeft; // Tính toán vị trí chuột khi bắt đầu kéo
-        scrollLeft = checkoutList.scrollLeft; // Lưu vị trí cuộn ngang khi bắt đầu kéo
-        checkoutList.style.cursor = 'grabbing'; // Thay đổi con trỏ thành "grabbing" khi kéo
-    });
+    function handleMouseDown(e) {
+        isDragging = true;
+        startX = e.pageX - checkoutList.offsetLeft;
+        scrollLeft = checkoutList.scrollLeft;
+        checkoutList.style.cursor = "grabbing";
+    }
 
     // Xử lý sự kiện khi chuột ra khỏi phần tử
-    checkoutList.addEventListener('mouseleave', () => {
-        isDragging = false; // Đặt trạng thái kéo chuột là sai
-        checkoutList.style.cursor = 'grab'; // Thay đổi con trỏ thành "grab" khi không kéo
-    });
+    function handleMouseLeave() {
+        isDragging = false;
+        checkoutList.style.cursor = "grab";
+    }
 
     // Xử lý sự kiện khi thả chuột
-    checkoutList.addEventListener('mouseup', () => {
-        isDragging = false; // Đặt trạng thái kéo chuột là sai
-        checkoutList.style.cursor = 'grab'; // Thay đổi con trỏ thành "grab" khi không kéo
-    });
+    function handleMouseUp() {
+        isDragging = false;
+        checkoutList.style.cursor = "grab";
+    }
 
     // Xử lý sự kiện khi di chuyển chuột
-    checkoutList.addEventListener('mousemove', (e) => {
-        if (!isDragging) return; // Nếu không kéo chuột thì không làm gì
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của trình duyệt
-        const x = e.pageX - checkoutList.offsetLeft; // Tính toán vị trí chuột hiện tại
-        const walk = (x - startX) * 2; // Tính toán khoảng cách di chuyển (2 là hệ số điều chỉnh tốc độ cuộn)
-        checkoutList.scrollLeft = scrollLeft - walk; // Cập nhật vị trí cuộn ngang của danh sách
-    });
+    function handleMouseMove(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - checkoutList.offsetLeft;
+        const walk = (x - startX) * 2;
+        checkoutList.scrollLeft = scrollLeft - walk;
+    }
 
     // Xử lý sự kiện cảm ứng trên các thiết bị di động
-    checkoutList.addEventListener('touchstart', (e) => {
-        isDragging = true; // Đặt trạng thái kéo chuột là đúng
-        startX = e.touches[0].pageX - checkoutList.offsetLeft; // Tính toán vị trí chạm khi bắt đầu kéo
-        scrollLeft = checkoutList.scrollLeft; // Lưu vị trí cuộn ngang khi bắt đầu kéo
-        checkoutList.style.cursor = 'grabbing'; // Thay đổi con trỏ thành "grabbing" khi kéo
-    });
+    function handleTouchStart(e) {
+        isDragging = true;
+        startX = e.touches[0].pageX - checkoutList.offsetLeft;
+        scrollLeft = checkoutList.scrollLeft;
+        checkoutList.style.cursor = "grabbing";
+    }
 
     // Xử lý sự kiện khi kết thúc cảm ứng
-    checkoutList.addEventListener('touchend', () => {
-        isDragging = false; // Đặt trạng thái kéo chuột là sai
-        checkoutList.style.cursor = 'grab'; // Thay đổi con trỏ thành "grab" khi không kéo
-    });
+    function handleTouchEnd() {
+        isDragging = false;
+        checkoutList.style.cursor = "grab";
+    }
 
     // Xử lý sự kiện khi di chuyển cảm ứng
-    checkoutList.addEventListener('touchmove', (e) => {
-        if (!isDragging) return; // Nếu không kéo chuột thì không làm gì
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của trình duyệt
-        const x = e.touches[0].pageX - checkoutList.offsetLeft; // Tính toán vị trí chạm hiện tại
-        const walk = (x - startX) * 2; // Tính toán khoảng cách di chuyển (2 là hệ số điều chỉnh tốc độ cuộn)
-        checkoutList.scrollLeft = scrollLeft - walk; // Cập nhật vị trí cuộn ngang của danh sách
-    });
+    function handleTouchMove(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - checkoutList.offsetLeft;
+        const walk = (x - startX) * 2;
+        checkoutList.scrollLeft = scrollLeft - walk;
+    }
+
+    // Xử lý kích thước màn hình khi tải trang
+    checkWidth();
+
+    // Xử lý kích thước màn hình khi thay đổi kích thước cửa sổ
+    window.addEventListener("resize", checkWidth);
 });
-
-
