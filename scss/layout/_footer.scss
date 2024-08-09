@@ -1,12 +1,36 @@
+@use "../abstracts";
+
 .footer {
     margin-top: 180px;
     background: rgba(67, 97, 238, 0.1);
     padding-top: 86px;
     padding-bottom: 98px;
 
+    @include abstracts.screen(sm) {
+        margin-top: 100px;
+        padding-top: 60px 30px 50px;
+    }
+
     &__row {
         display: grid;
         grid-template-columns: auto auto auto auto;
+        @include abstracts.screen(lg) {
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+        @include abstracts.screen(md) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &__col-first,
+    &__col-second {
+        @include abstracts.screen(lg) {
+            text-align: center;
+        }
     }
 
     &__address {
@@ -16,10 +40,22 @@
         font-size: 1.6rem;
         line-height: 24px;
         color: #2b2b2b;
+        @include abstracts.screen(lg) {
+            justify-content: center;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+            line-height: 24px;
+            color: #808080;
+        }
     }
 
     &__phone-info {
         margin-top: 48px;
+        @include abstracts.screen(lg) {
+            margin-top: 30px;
+            justify-content: center;
+        }
     }
 
     &__phone,
@@ -29,10 +65,18 @@
         font-size: 1.6rem;
         line-height: 24px;
         color: #2b2b2b;
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+            line-height: 24px;
+            color: #808080;
+        }
     }
 
     &__email-info {
         margin-top: 31px;
+        @include abstracts.screen(lg) {
+            margin-top: 20px;
+        }
     }
 
     &__heading {
@@ -40,10 +84,18 @@
         font-size: 1.94rem;
         line-height: 29.1px;
         color: #0b090a;
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+            line-height: 24px;
+        }
     }
 
     &__heading-sub {
-        width: 230px;
+        width: 218px;
+        @include abstracts.screen(lg) {
+            margin: 40px auto 20px;
+            justify-content: center;
+        }
     }
 
     &__list {
@@ -104,6 +156,12 @@
         display: flex;
         margin-top: 30px;
         column-gap: 20px;
+        @include abstracts.screen(lg) {
+            justify-content: center;
+        }
+        @include abstracts.screen(sm) {
+            column-gap: 40px;
+        }
     }
 
     &__social-item {
@@ -128,11 +186,21 @@
         font-size: 1.6rem;
         line-height: 26px;
         color: #aaaaaa;
+        @include abstracts.screen(lg) {
+            margin: auto;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 1.33rem;
+            line-height: 22px;
+        }
     }
 
     &-list {
         display: flex;
         column-gap: 40px;
+        @include abstracts.screen(lg) {
+            column-gap: 20px;
+        }
     }
 
     &-link {

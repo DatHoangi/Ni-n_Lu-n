@@ -45,3 +45,13 @@
         margin-left: 39px;
     }
 }
+
+.footer__logo {
+    @include abstracts.screen(lg) {
+        margin-left: 0px;
+    }
+    @include abstracts.screen(lg) {
+        justify-content: center;
+    }
+
+}
