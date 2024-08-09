@@ -1,0 +1,140 @@
+@use "../abstracts";
+
+.register {
+    margin-top: 250px;
+    background: #3a0ca3;
+    border-radius: 40px;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 260px;
+        z-index: 1;
+        @include abstracts.screen(xl) {
+            display: block;
+            height: 600px;
+            padding: 70px 30px 0px;
+        }
+    }
+
+    &__img-avatar {
+        position: absolute;
+        bottom: 0%;
+        left: 2%;
+        object-fit: cover;
+
+        @include abstracts.screen(xl) {
+            left: 30%;
+            margin: auto;
+        }
+
+        @include abstracts.screen(lg) {
+            bottom: 0%;
+            left: 25%;
+        }
+
+        @include abstracts.screen(md) {
+            left: 10%;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 270px;
+            height: 262px;
+        }
+    }
+
+    &__img-decor {
+        position: absolute;
+    }
+
+    &__img-decor-left {
+        bottom: 15%;
+        left: 23%;
+        z-index: -1;
+
+        @include abstracts.screen(xl) {
+            bottom: 12%;
+            left: 32%;
+        }
+
+        @include abstracts.screen(lg) {
+            bottom: 10%;
+            left: 25%;
+        }
+        @include abstracts.screen(md) {
+            width: 40px;
+            height: 40px;
+            left: 25%;
+            bottom: 18%;
+        }
+    }
+
+    &__img-decor-right {
+        top: -17%;
+        left: 89%;
+        z-index: -1;
+
+        @include abstracts.screen(xl) {
+            top: -5%;
+            left: 85%;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 252px;
+            height: 252px;
+            top: -15%;
+            left: 65%;
+        }
+
+        @include abstracts.screen(md) {
+            left: 55%;
+        }
+    }
+
+    &__info-heading {
+        color: #fff;
+        @include abstracts.screen(sm) {
+            font-size: 2.76rem;
+            line-height: 41.4px;
+        }
+    }
+
+    &__info-desc {
+        color: #fff;
+        @include abstracts.screen(xl) {
+            margin-top: 10px;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 1.33rem;
+            line-height: 22px;
+        }
+    }
+
+    &__info {
+        margin-left: 418px;
+        width: 344px;
+        @include abstracts.screen(xl) {
+            margin: auto;
+            padding-bottom: 40px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 273px;
+            margin-left: 0px;
+        }
+    }
+
+    &__btn {
+        margin-left: 85px;
+        width: 165px;
+        color: #3a0ca3;
+        @include abstracts.screen(xl) {
+            margin: auto;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-left: 0px;
+        }
+    }
+}

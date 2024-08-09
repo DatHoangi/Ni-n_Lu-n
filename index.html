@@ -46,7 +46,7 @@
         <!-- Script -->
         <script src="./assets/js/scripts.js"></script>
     </head>
-    <body style="height: 9000px">
+    <body>
         <!-- Top Header -->
         <div class="top-header-bg">
             <div class="container">
@@ -976,15 +976,15 @@
                             </p>
                             <div class="testimonials-evaluate__border"></div>
                             <img
-                                    src="./assets/icon/testimonials3.svg"
-                                    alt=""
-                                    class="testimonials-evaluate__icon"
-                                />
-                                <img
-                                    src="./assets/icon/testimonials4.svg"
-                                    alt=""
-                                    class="testimonials-evaluate__icon testimonials-evaluate__icon-yellow"
-                                />
+                                src="./assets/icon/testimonials3.svg"
+                                alt=""
+                                class="testimonials-evaluate__icon"
+                            />
+                            <img
+                                src="./assets/icon/testimonials4.svg"
+                                alt=""
+                                class="testimonials-evaluate__icon testimonials-evaluate__icon-yellow"
+                            />
                             <div class="testimonials-evaluate__info">
                                 <div class="testimonials-evaluate__person">
                                     <img
@@ -1026,14 +1026,15 @@
                             </div>
 
                             <!-- testimonials mobile -->
-                            <div class="testimonials-evaluate__info-mobile d-none d-md-flex">
+                            <div
+                                class="testimonials-evaluate__info-mobile d-none d-md-flex"
+                            >
                                 <img
-                                        src="./assets/img/testimonials.jpg"
-                                        alt=""
-                                        class="testimonials-evaluate__avatar"
-                                    />
+                                    src="./assets/img/testimonials.jpg"
+                                    alt=""
+                                    class="testimonials-evaluate__avatar"
+                                />
                                 <div class="testimonials-evaluate__person">
-                                    
                                     <div class="testimonials-evaluate__name">
                                         Barbara D. Smith
                                     </div>
@@ -1065,9 +1066,7 @@
                                         />
                                     </div>
                                 </div>
-                                
                             </div>
-
                         </div>
                     </div>
                     <div class="testimonials-border__list">
@@ -1077,10 +1076,61 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Register -->
+            <section class="register">
+                <div class="register__inner">
+                    <img
+                        src="./assets/img/register.png"
+                        alt=""
+                        class="register__img-avatar"
+                    />
+                    <img
+                        src="./assets/icon/register1.svg"
+                        alt=""
+                        class="register__img-decor register__img-decor-left"
+                    />
+                    <img
+                        src="./assets/icon/register2.svg"
+                        alt=""
+                        class="register__img-decor register__img-decor-right"
+                    />
+                    <div class="register__info">
+                        <h2 class="register__info-heading heading">
+                            Become a Agent.
+                        </h2>
+                        <p class="register__info-desc desc">
+                            Fusce venenatis tellus a felis scelerisque.
+                            venenatis tellus a felis scelerisque.
+                        </p>
+                    </div>
+                    <button class="register__btn btn">Register Now</button>
+                </div>
+            </section>
         </div>
 
         <!-- Footer -->
-        <footer id="footer"></footer>
+        <footer id="footer" class="footer"></footer>
+
+        <!-- Footer bottom -->
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__bottom-desc">
+                        © Rezilla – All rights reserved
+                    </p>
+                    <div class="footer__bottom-list">
+                        <a href="" class="footer__bottom-link">
+                            Terms and Conditions
+                        </a>
+                        <a href="" class="footer__bottom-link">
+                            Privacy Policy
+                        </a>
+                        <a href="" class="footer__bottom-link">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script>
             load("#footer", "./templates/footer.html");
         </script>

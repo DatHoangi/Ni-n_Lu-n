@@ -1,0 +1,144 @@
+.footer {
+    margin-top: 180px;
+    background: rgba(67, 97, 238, 0.1);
+    padding-top: 86px;
+    padding-bottom: 98px;
+
+    &__row {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    &__address {
+        margin-top: 32px;
+        width: 188px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 24px;
+        color: #2b2b2b;
+    }
+
+    &__phone-info {
+        margin-top: 48px;
+    }
+
+    &__phone,
+    &__email {
+        margin-left: 8px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 24px;
+        color: #2b2b2b;
+    }
+
+    &__email-info {
+        margin-top: 31px;
+    }
+
+    &__heading {
+        font-weight: 500;
+        font-size: 1.94rem;
+        line-height: 29.1px;
+        color: #0b090a;
+    }
+
+    &__heading-sub {
+        width: 230px;
+    }
+
+    &__list {
+        margin-top: 40px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 4px 0;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 26px;
+    }
+
+    &__subscribe-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 350px;
+        height: 60px;
+        border-radius: 99px;
+        margin-top: 21px;
+        border: 2px solid #fff;
+        background: #fff;
+    }
+
+    &__subscribe-form-input {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        border: none;
+        outline: none;
+        border-radius: inherit;
+        font-size: 1.6rem;
+        line-height: 26px;
+        color: #aaaaaa;
+    }
+
+    &__subscribe-form__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #3a0ca3;
+        outline: none;
+        border: none;
+    }
+
+    &__heading-social {
+        margin-top: 32px;
+    }
+
+    &__social-list {
+        display: flex;
+        margin-top: 30px;
+        column-gap: 20px;
+    }
+
+    &__social-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.footer__bottom {
+    padding: 19px 0 20px;
+    background: #0b090a;
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-desc {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 26px;
+        color: #aaaaaa;
+    }
+
+    &-list {
+        display: flex;
+        column-gap: 40px;
+    }
+
+    &-link {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 26px;
+        color: #d4d4d4;
+    }
+}
