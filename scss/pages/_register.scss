@@ -1,9 +1,25 @@
 @use "../abstracts";
 
 .register {
-    margin-top: 250px;
+    width: 1200px;
+    margin: 250px auto 0px;
     background: #3a0ca3;
     border-radius: 40px;
+
+    @include abstracts.screen(xl) {
+        max-width: calc(100% - 80px);
+    }
+    @include abstracts.screen(md) {
+        margin-top: 100px;
+        max-width: calc(100% - 30px);
+    }
+
+    &__container {
+        width: 1230px;
+        max-width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     &__inner {
         position: relative;
@@ -25,17 +41,17 @@
         object-fit: cover;
 
         @include abstracts.screen(xl) {
-            left: 30%;
+            left: 31%;
             margin: auto;
         }
 
         @include abstracts.screen(lg) {
             bottom: 0%;
-            left: 25%;
+            left: 30%;
         }
 
         @include abstracts.screen(md) {
-            left: 10%;
+            left: 25%;
         }
 
         @include abstracts.screen(sm) {
@@ -54,18 +70,18 @@
         z-index: -1;
 
         @include abstracts.screen(xl) {
-            bottom: 12%;
-            left: 32%;
+            bottom: 11%;
+            left: 36%;
         }
 
         @include abstracts.screen(lg) {
             bottom: 10%;
-            left: 25%;
+            left: 33%;
         }
         @include abstracts.screen(md) {
             width: 40px;
             height: 40px;
-            left: 25%;
+            left: 35%;
             bottom: 18%;
         }
     }
@@ -84,11 +100,14 @@
             width: 252px;
             height: 252px;
             top: -15%;
-            left: 65%;
+            left: 48%;
         }
 
         @include abstracts.screen(md) {
-            left: 55%;
+            left: 48%;
+        }
+        @include abstracts.screen(sm) {
+            left: 33%;
         }
     }
 

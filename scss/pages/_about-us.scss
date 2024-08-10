@@ -3,6 +3,10 @@
 .about-us {
     margin-top: 85px;
 
+    @include abstracts.screen(md) {
+        margin-top: 100px;
+    }
+
     &__inner {
         display: flex;
         align-items: self-end;
@@ -21,18 +25,40 @@
         }
     }
 
+    &__title {
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 24px;
+        }
+    }
+
     &__heading {
         margin-top: 40px;
         width: 500px;
-        @include abstracts.screen(sm) {
+        @include abstracts.screen(md) {
             width: 100%;
+        }
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+            font-size: 2.76rem;
+            line-height: 41.4px;
+        }
+        @include abstracts.screen(xs) {
+            width: 333px;
         }
     }
 
     &__desc {
         width: 500px;
-        @include abstracts.screen(sm) {
+        @include abstracts.screen(md) {
             width: 100%;
+        }
+        @include abstracts.screen(xs) {
+            width: 333px;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 1.33rem;
+            line-height: 22px;
         }
     }
 

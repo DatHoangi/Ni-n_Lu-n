@@ -6,6 +6,10 @@
 
     background: rgba(212, 212, 212, 0.3);
 
+    @include abstracts.screen(md) {
+        margin-top: 100px;
+    }
+
     &-top {
         text-align: center;
     }
@@ -31,7 +35,7 @@
         display: flex;
         gap: 50px;
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(lg) {
             flex-direction: column;
             gap: 30px;
         }

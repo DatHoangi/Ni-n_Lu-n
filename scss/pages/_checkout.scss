@@ -4,6 +4,9 @@
     margin-top: 200px;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    @include abstracts.screen(md) {
+        margin-top: 100px;
+    }
 
     &-content-title {
         @include abstracts.screen(sm) {
@@ -224,7 +227,7 @@
 
     &-view__more {
         display: none;
-        margin: 60px auto;
+        margin: 60px auto 0;
         font-weight: 500;
         font-size: 1.6rem;
         line-height: 24px;

@@ -140,6 +140,12 @@
         @include abstracts.screen(xl) {
             width: 355px;
         }
+        @include abstracts.screen(sm) {
+            width: 400px;
+        }
+        @include abstracts.screen(xs) {
+            width: 333px;
+        }
     }
 
     &__form-group {
@@ -150,6 +156,9 @@
         gap: 125px;
         border-radius: 20px 20px 0 0;
         background: #fff;
+        @include abstracts.screen(sm) {
+            gap: 68px;
+        }
     }
 
     &__form-label {
@@ -175,6 +184,10 @@
         border-radius: 3px;
         z-index: 1;
         background: #5f42b6;
+        @include abstracts.screen(sm) {
+            width: 100px;
+            left: -20px;
+        }
     }
 
     &__form-input {
@@ -189,6 +202,9 @@
         border: none;
         outline: none;
         background: #d4d4d433;
+        @include abstracts.screen(sm) {
+            width: 290px;
+        }
     }
 
     &__form-input::placeholder {
@@ -197,6 +213,9 @@
 
     &__form-section {
         margin-top: 30px;
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__form-type {
@@ -215,12 +234,18 @@
         background-image: url(/assets/icon/arrow.svg);
         background-repeat: no-repeat;
         background-position: right 26px center;
+        @include abstracts.screen(sm) {
+            width: 290px;
+        }
     }
 
     &__form-search {
         margin-top: 20px;
         display: flex;
         align-items: center;
+        @include abstracts.screen(sm) {
+            margin-top: 15px;
+        }
     }
     &__from-advance {
         margin-left: 10px;
@@ -243,6 +268,9 @@
         @include abstracts.screen(xl) {
             left: 123px;
         }
+        @include abstracts.screen(sm) {
+            left: 110px;
+        }
     }
 
     &-search-btn {
@@ -252,5 +280,8 @@
         color: #fff;
         padding: 30px 60px;
         line-height: 24px;
+        @include abstracts.screen(sm) {
+            width: 290px;
+        }
     }
 }

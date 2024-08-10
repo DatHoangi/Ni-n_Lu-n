@@ -7,6 +7,22 @@
   justify-content: space-between;
   height: 40px;
 }
+.top-header__container {
+  width: 1270px;
+  max-width: calc(100% - 30px);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1199.98px) {
+  .top-header__container {
+    width: 1110px;
+  }
+}
+@media (max-width: 991.98px) {
+  .top-header__container {
+    width: 900px;
+  }
+}
 .top-header-bg {
   background: #3a0ca3;
 }
@@ -213,7 +229,7 @@
 @media (max-width: 575.98px) {
   .footer {
     margin-top: 100px;
-    padding-top: 60px 30px 50px;
+    padding: 60px 30px 50px;
   }
 }
 .footer__row {

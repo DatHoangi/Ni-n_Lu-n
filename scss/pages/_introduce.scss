@@ -2,6 +2,19 @@
 
 .introduce {
     margin-top: 105px;
+    @include abstracts.screen(md) {
+        margin-top: 100px;
+    }
+
+    &__container {
+        width: 1044px;
+        max-width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+        @include abstracts.screen(xl) {
+            width: 884px;
+        }
+    }
 
     &-content {
         text-align: center;
@@ -26,8 +39,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 63px;
+        @include abstracts.screen(xl) {
+            flex-wrap: wrap;
+        }
     }
 
     &-item__img {

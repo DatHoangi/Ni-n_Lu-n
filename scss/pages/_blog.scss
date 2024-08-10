@@ -5,6 +5,9 @@
     padding-top: 110px;
     padding-bottom: 100px;
     background: #3a0ca3;
+    @include abstracts.screen(md) {
+        margin-top: 100px;
+    }
 
     &-content {
         text-align: center;
