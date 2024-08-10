@@ -332,10 +332,14 @@
 }
 .footer__link {
   display: inline-block;
-  padding: 4px 0;
+  padding: 4px 4px;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 26px;
+}
+.footer__link:hover {
+  border-radius: 999px;
+  background: rgba(67, 97, 238, 0.3019607843);
 }
 .footer__subscribe-form {
   display: flex;

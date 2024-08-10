@@ -2077,5 +2077,11 @@
     margin-left: 0px;
   }
 }
+.register__btn:hover {
+  width: 167px;
+  background: #3a0ca3;
+  color: #fff;
+  border: 1px solid #fff;
+}
 
 /*# sourceMappingURL=index.css.map */
