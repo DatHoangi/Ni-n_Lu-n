@@ -2,6 +2,9 @@
 
 .testimonials {
     margin-top: 217px;
+    @include abstracts.screen(lg) {
+    }
+
     @include abstracts.screen(md) {
         margin-top: 100px;
     }
@@ -11,6 +14,7 @@
     }
 
     &__inner {
+        position: relative;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -224,14 +228,25 @@
     }
 
     &-border__list {
-        margin-left: 30px;
         @include abstracts.screen(lg) {
             display: flex;
             gap: 15px;
             align-items: center;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 426px;
+
             margin-left: 0;
+        }
+        @include abstracts.screen(md) {
+            margin-top: 503px;
+            margin-right: 130px;
+        }
+        @include abstracts.screen(sm) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        @include abstracts.screen(xs) {
+            margin-top: 520px;
         }
     }
 
@@ -241,6 +256,7 @@
         border: 2px solid #aaaaaa;
         border-radius: 4px;
         opacity: 0.5;
+        transition: background-color 0.3s ease;
         @include abstracts.screen(lg) {
             width: 37px;
             height: 1px;
@@ -248,8 +264,42 @@
         }
     }
 
-    &-border__item:first-child {
-        opacity: 1;
+    // &-border__item:first-child {
+    //     opacity: 1;
+    //     border-color: #808080;
+    // }
+    &-border__item.active {
         border-color: #808080;
+        opacity: 1;
     }
+}
+
+.testimonials__list {
+    margin-left: auto;
+    width: 500px; /* Cập nhật kích thước cho phù hợp với phần tử chứa */
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+    @include abstracts.screen(sm) {
+        width: 333px;
+        margin-left: 0;
+    }
+}
+
+.testimonials-evaluate {
+    flex: 0 0 100%; /* Mỗi testimonial chiếm toàn bộ chiều rộng */
+    box-sizing: border-box;
+    transition: opacity 0.5s ease; /* Thêm hiệu ứng chuyển đổi */
+    position: absolute; /* Để các phần tử chồng lên nhau */
+    top: 0;
+    right: 30px;
+    @include abstracts.screen(lg) {
+        top: 30%;
+        left: auto;
+        right: auto;
+    }
+}
+.testimonials-evaluate.hidden {
+    opacity: 0;
+    pointer-events: none; /* Ngăn cản tương tác với các phần tử bị ẩn */
 }

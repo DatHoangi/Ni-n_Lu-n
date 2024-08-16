@@ -114,22 +114,63 @@
                             vestibulum. Integer a dolor eu sapien sodales
                             vulputate ac in purus.
                         </p>
-                        <img
-                            src="./assets/img/hero1.png"
-                            alt=""
-                            class="hero__img"
-                        />
-                        <img
-                            src="./assets/icon/hero1.svg"
-                            alt=""
-                            class="hero__decor hero__decor-inner"
-                        />
+                        <!-- slide show -->
+                        <div class="slide-show-container">
+                            <div class="slide-show">
+                                <div class="list-images">
+                                    <img
+                                        src="./assets/img/hero1.png"
+                                        alt=""
+                                        class="image"
+                                    />
+                                    <img
+                                        src="./assets/img/hero1.png"
+                                        alt=""
+                                        class="image"
+                                    />
+                                    <img
+                                        src="./assets/img/hero1.png"
+                                        alt=""
+                                        class="image"
+                                    />
+                                    <img
+                                        src="./assets/img/hero1.png"
+                                        alt=""
+                                        class="image"
+                                    />
+                                </div>
+                            </div>
+                            <div class="btns-image">
+                                <button class="btn-left btn-image">
+                                    <img
+                                        src="./assets/icon/arrow-left.svg"
+                                        alt=""
+                                        class="icon-image"
+                                    />
+                                </button>
+                                <button class="btn-right btn-image">
+                                    <img
+                                        src="./assets/icon/arrow-right.svg"
+                                        alt=""
+                                        class="icon-image"
+                                    />
+                                </button>
+                            </div>
+                            <div class="dots-image">
+                                <div class="dot-item dot-active"></div>
+                                <div class="dot-item"></div>
+                                <div class="dot-item"></div>
+                                <div class="dot-item"></div>
+                            </div>
+                        </div>
+                        <div class="hero__decor hero__decor-inner"></div>
                         <img
                             src="./assets/icon/hero2.svg"
                             alt=""
                             class="hero__decor hero__decor-img"
                         />
                     </section>
+
                     <!-- Hero form -->
                     <div class="hero__form">
                         <form action="" class="hero__form-infomation">
@@ -842,89 +883,254 @@
                         Latest Blogs & Posts
                     </h2>
                 </div>
-                <div class="blog-list">
-                    <!-- item 1 -->
-                    <div class="blog-item">
-                        <img
-                            src="./assets/img/blog1.jpg"
-                            alt=""
-                            class="blog-item__img"
-                        />
-                        <div class="blog-item__date">
-                            <span class="blog-item__day">28</span>
-                            <span class="blog-item__month">Tue</span>
-                        </div>
-                        <h3 class="blog-item__title">
-                            Top 10 Home Buying Mistakes to Avoid
-                        </h3>
-                        <p class="blog-item__desc">
-                            Etiam eget elementum elit. Aenean dignissim dapibus
-                            vestibulum
-                        </p>
-                        <button class="blog-item__btn">
+                <div class="blog__list-item">
+                    <!-- blog list 1 -->
+                    <div class="blog-list">
+                        <!-- item 1 -->
+                        <div class="blog-item">
                             <img
-                                src="./assets/icon/blog_icon.svg"
+                                src="./assets/img/blog1.jpg"
                                 alt=""
-                                class="blog-item__icon"
+                                class="blog-item__img"
                             />
-                        </button>
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">28</span>
+                                <span class="blog-item__month">Tue</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                Top 10 Home Buying Mistakes to Avoid
+                            </h3>
+                            <p class="blog-item__desc">
+                                Etiam eget elementum elit. Aenean dignissim
+                                dapibus vestibulum
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="blog-item">
+                            <img
+                                src="./assets/img/blog2.jpg"
+                                alt=""
+                                class="blog-item__img"
+                            />
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">08</span>
+                                <span class="blog-item__month">Mon</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                How to Stage Your Home for a Quick Sale
+                            </h3>
+                            <p class="blog-item__desc">
+                                Nullam odio lacus, dictum quis pretium congue,
+                                vehicula venenatis nunc.
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="blog-item">
+                            <img
+                                src="./assets/img/blog3.jpg"
+                                alt=""
+                                class="blog-item__img"
+                            />
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">26</span>
+                                <span class="blog-item__month">Wed</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                5 Tips for First-Time Home Sellers
+                            </h3>
+                            <p class="blog-item__desc">
+                                In hac habitasse platea dictumst. Phasellus vel
+                                velit vel augue maximus.
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
                     </div>
-                    <!-- item 2 -->
-                    <div class="blog-item">
-                        <img
-                            src="./assets/img/blog2.jpg"
-                            alt=""
-                            class="blog-item__img"
-                        />
-                        <div class="blog-item__date">
-                            <span class="blog-item__day">08</span>
-                            <span class="blog-item__month">Mon</span>
-                        </div>
-                        <h3 class="blog-item__title">
-                            How to Stage Your Home for a Quick Sale
-                        </h3>
-                        <p class="blog-item__desc">
-                            Nullam odio lacus, dictum quis pretium congue,
-                            vehicula venenatis nunc.
-                        </p>
-                        <button class="blog-item__btn">
+                    <!-- blog list 2 -->
+                    <div class="blog-list">
+                        <!-- item 1 -->
+                        <div class="blog-item">
                             <img
-                                src="./assets/icon/blog_icon.svg"
+                                src="./assets/img/blog4.jpg"
                                 alt=""
-                                class="blog-item__icon"
+                                class="blog-item__img"
                             />
-                        </button>
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">17</span>
+                                <span class="blog-item__month">Tue</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                Top 10 Home Buying Mistakes to Avoid
+                            </h3>
+                            <p class="blog-item__desc">
+                                Etiam eget elementum elit. Aenean dignissim
+                                dapibus vestibulum
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="blog-item">
+                            <img
+                                src="./assets/img/blog5.jpg"
+                                alt=""
+                                class="blog-item__img"
+                            />
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">18</span>
+                                <span class="blog-item__month">Mon</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                How to Stage Your Home for a Quick Sale
+                            </h3>
+                            <p class="blog-item__desc">
+                                Nullam odio lacus, dictum quis pretium congue,
+                                vehicula venenatis nunc.
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="blog-item">
+                            <img
+                                src="./assets/img/blog6.jpg"
+                                alt=""
+                                class="blog-item__img"
+                            />
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">06</span>
+                                <span class="blog-item__month">Wed</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                5 Tips for First-Time Home Sellers
+                            </h3>
+                            <p class="blog-item__desc">
+                                In hac habitasse platea dictumst. Phasellus vel
+                                velit vel augue maximus.
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
                     </div>
-                    <!-- item 3 -->
-                    <div class="blog-item">
-                        <img
-                            src="./assets/img/blog3.jpg"
-                            alt=""
-                            class="blog-item__img"
-                        />
-                        <div class="blog-item__date">
-                            <span class="blog-item__day">26</span>
-                            <span class="blog-item__month">Wed</span>
-                        </div>
-                        <h3 class="blog-item__title">
-                            5 Tips for First-Time Home Sellers
-                        </h3>
-                        <p class="blog-item__desc">
-                            In hac habitasse platea dictumst. Phasellus vel
-                            velit vel augue maximus.
-                        </p>
-                        <button class="blog-item__btn">
+                    <!-- blog list 3 -->
+                    <div class="blog-list">
+                        <!-- item 1 -->
+                        <div class="blog-item">
                             <img
-                                src="./assets/icon/blog_icon.svg"
+                                src="./assets/img/blog7.jpg"
                                 alt=""
-                                class="blog-item__icon"
+                                class="blog-item__img"
                             />
-                        </button>
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">09</span>
+                                <span class="blog-item__month">Tue</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                Relax, work and have a cup of coffee
+                            </h3>
+                            <p class="blog-item__desc">
+                                Etiam eget elementum elit. Aenean dignissim
+                                dapibus vestibulum
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="blog-item">
+                            <img
+                                src="./assets/img/blog8.jpg"
+                                alt=""
+                                class="blog-item__img"
+                            />
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">10</span>
+                                <span class="blog-item__month">Mon</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                How to Stage Your Home for a Quick Sale
+                            </h3>
+                            <p class="blog-item__desc">
+                                Nullam odio lacus, dictum quis pretium congue,
+                                vehicula venenatis nunc.
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="blog-item">
+                            <img
+                                src="./assets/img/blog9.jpg"
+                                alt=""
+                                class="blog-item__img"
+                            />
+                            <div class="blog-item__date">
+                                <span class="blog-item__day">13</span>
+                                <span class="blog-item__month">Wed</span>
+                            </div>
+                            <h3 class="blog-item__title">
+                                5 Tips for First-Time Home Sellers
+                            </h3>
+                            <p class="blog-item__desc">
+                                In hac habitasse platea dictumst. Phasellus vel
+                                velit vel augue maximus.
+                            </p>
+                            <button class="blog-item__btn next-btn">
+                                <img
+                                    src="./assets/icon/blog_icon.svg"
+                                    alt=""
+                                    class="blog-item__icon"
+                                />
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="blog-border__list d-xl-none">
-                    <div class="blog-border__item"></div>
+                    <div class="blog-border__item active"></div>
                     <div class="blog-border__item"></div>
                     <div class="blog-border__item"></div>
                 </div>
@@ -951,14 +1157,18 @@
                             pulvinar est pellentesque.
                         </p>
                         <div class="testimonials-btn d-lg-none">
-                            <button class="testimonials-btn__bg">
+                            <button
+                                class="testimonials-btn__bg testimonials-btn__left"
+                            >
                                 <img
                                     src="./assets/icon/testimonials1.svg"
                                     alt=""
                                     class="testimonials-btn__icon"
                                 />
                             </button>
-                            <button class="testimonials-btn__bg">
+                            <button
+                                class="testimonials-btn__bg testimonials-btn__right"
+                            >
                                 <img
                                     src="./assets/icon/testimonials2.svg"
                                     alt=""
@@ -967,77 +1177,40 @@
                             </button>
                         </div>
                     </div>
-                    <div class="testimonials-evaluate">
-                        <div class="testimonials-evaluate__introduce">
-                            <p class="testimonials-evaluate__desc">
-                                I highly recommend Jodi J. Appleby. She was
-                                attentive to our needs and worked tirelessly to
-                                find us the perfect home. We couldn't be happier
-                                with our new place!
-                            </p>
-                            <div class="testimonials-evaluate__border"></div>
-                            <img
-                                src="./assets/icon/testimonials3.svg"
-                                alt=""
-                                class="testimonials-evaluate__icon"
-                            />
-                            <img
-                                src="./assets/icon/testimonials4.svg"
-                                alt=""
-                                class="testimonials-evaluate__icon testimonials-evaluate__icon-yellow"
-                            />
-                            <div class="testimonials-evaluate__info">
-                                <div class="testimonials-evaluate__person">
-                                    <img
-                                        src="./assets/img/testimonials.jpg"
-                                        alt=""
-                                        class="testimonials-evaluate__avatar"
-                                    />
-                                    <div class="testimonials-evaluate__name">
-                                        Barbara D. Smith
-                                    </div>
-                                </div>
-                                <div class="testimonials-evaluate__starts">
-                                    <img
-                                        src="./assets/icon/start.svg"
-                                        alt=""
-                                        class="testimonials-evaluate__start"
-                                    />
-                                    <img
-                                        src="./assets/icon/start.svg"
-                                        alt=""
-                                        class="testimonials-evaluate__start"
-                                    />
-                                    <img
-                                        src="./assets/icon/start.svg"
-                                        alt=""
-                                        class="testimonials-evaluate__start"
-                                    />
-                                    <img
-                                        src="./assets/icon/start.svg"
-                                        alt=""
-                                        class="testimonials-evaluate__start"
-                                    />
-                                    <img
-                                        src="./assets/icon/start-none.svg"
-                                        alt=""
-                                        class="testimonials-evaluate__start"
-                                    />
-                                </div>
-                            </div>
-
-                            <!-- testimonials mobile -->
-                            <div
-                                class="testimonials-evaluate__info-mobile d-none d-md-flex"
-                            >
+                    <div class="testimonials__list">
+                        <div class="testimonials-evaluate">
+                            <div class="testimonials-evaluate__introduce">
+                                <p class="testimonials-evaluate__desc">
+                                    I highly recommend Jodi J. Appleby. She was
+                                    attentive to our needs and worked tirelessly
+                                    to find us the perfect home. We couldn't be
+                                    happier with our new place!
+                                </p>
+                                <div
+                                    class="testimonials-evaluate__border"
+                                ></div>
                                 <img
-                                    src="./assets/img/testimonials.jpg"
+                                    src="./assets/icon/testimonials3.svg"
                                     alt=""
-                                    class="testimonials-evaluate__avatar"
+                                    class="testimonials-evaluate__icon"
                                 />
-                                <div class="testimonials-evaluate__person">
-                                    <div class="testimonials-evaluate__name">
-                                        Barbara D. Smith
+                                <img
+                                    src="./assets/icon/testimonials4.svg"
+                                    alt=""
+                                    class="testimonials-evaluate__icon testimonials-evaluate__icon-yellow"
+                                />
+                                <div class="testimonials-evaluate__info">
+                                    <div class="testimonials-evaluate__person">
+                                        <img
+                                            src="./assets/img/testimonials.jpg"
+                                            alt=""
+                                            class="testimonials-evaluate__avatar"
+                                        />
+                                        <div
+                                            class="testimonials-evaluate__name"
+                                        >
+                                            Barbara D. Smith
+                                        </div>
                                     </div>
                                     <div class="testimonials-evaluate__starts">
                                         <img
@@ -1067,11 +1240,280 @@
                                         />
                                     </div>
                                 </div>
+
+                                <!-- testimonials mobile -->
+                                <div
+                                    class="testimonials-evaluate__info-mobile d-none d-md-flex"
+                                >
+                                    <img
+                                        src="./assets/img/testimonials.jpg"
+                                        alt=""
+                                        class="testimonials-evaluate__avatar"
+                                    />
+                                    <div class="testimonials-evaluate__person">
+                                        <div
+                                            class="testimonials-evaluate__name"
+                                        >
+                                            Barbara D. Smith
+                                        </div>
+                                        <div
+                                            class="testimonials-evaluate__starts"
+                                        >
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start-none.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials-evaluate">
+                            <div class="testimonials-evaluate__introduce">
+                                <p class="testimonials-evaluate__desc">
+                                    I highly recommend Jodi J. Appleby Lorem
+                                    ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Corrupti, reiciendis
+                                    molestias! Eaque, placeat possimus
+                                </p>
+                                <div
+                                    class="testimonials-evaluate__border"
+                                ></div>
+                                <img
+                                    src="./assets/icon/testimonials3.svg"
+                                    alt=""
+                                    class="testimonials-evaluate__icon"
+                                />
+                                <img
+                                    src="./assets/icon/testimonials4.svg"
+                                    alt=""
+                                    class="testimonials-evaluate__icon testimonials-evaluate__icon-yellow"
+                                />
+                                <div class="testimonials-evaluate__info">
+                                    <div class="testimonials-evaluate__person">
+                                        <img
+                                            src="./assets/img/testimonials.jpg"
+                                            alt=""
+                                            class="testimonials-evaluate__avatar"
+                                        />
+                                        <div
+                                            class="testimonials-evaluate__name"
+                                        >
+                                            Barbara D. Smith
+                                        </div>
+                                    </div>
+                                    <div class="testimonials-evaluate__starts">
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start-none.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                    </div>
+                                </div>
+
+                                <!-- testimonials mobile -->
+                                <div
+                                    class="testimonials-evaluate__info-mobile d-none d-md-flex"
+                                >
+                                    <img
+                                        src="./assets/img/testimonials.jpg"
+                                        alt=""
+                                        class="testimonials-evaluate__avatar"
+                                    />
+                                    <div class="testimonials-evaluate__person">
+                                        <div
+                                            class="testimonials-evaluate__name"
+                                        >
+                                            Barbara D. Smith
+                                        </div>
+                                        <div
+                                            class="testimonials-evaluate__starts"
+                                        >
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start-none.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials-evaluate">
+                            <div class="testimonials-evaluate__introduce">
+                                <p class="testimonials-evaluate__desc">
+                                    I highly recommend Jodi J. Appleby. She was
+                                    attentive to our needs and worked tirelessly
+                                    to find us the perfect home. Lorem ipsum
+                                    dolor sit amet.
+                                </p>
+                                <div
+                                    class="testimonials-evaluate__border"
+                                ></div>
+                                <img
+                                    src="./assets/icon/testimonials3.svg"
+                                    alt=""
+                                    class="testimonials-evaluate__icon"
+                                />
+                                <img
+                                    src="./assets/icon/testimonials4.svg"
+                                    alt=""
+                                    class="testimonials-evaluate__icon testimonials-evaluate__icon-yellow"
+                                />
+                                <div class="testimonials-evaluate__info">
+                                    <div class="testimonials-evaluate__person">
+                                        <img
+                                            src="./assets/img/testimonials.jpg"
+                                            alt=""
+                                            class="testimonials-evaluate__avatar"
+                                        />
+                                        <div
+                                            class="testimonials-evaluate__name"
+                                        >
+                                            Barbara D. Smith
+                                        </div>
+                                    </div>
+                                    <div class="testimonials-evaluate__starts">
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                        <img
+                                            src="./assets/icon/start-none.svg"
+                                            alt=""
+                                            class="testimonials-evaluate__start"
+                                        />
+                                    </div>
+                                </div>
+
+                                <!-- testimonials mobile -->
+                                <div
+                                    class="testimonials-evaluate__info-mobile d-none d-md-flex"
+                                >
+                                    <img
+                                        src="./assets/img/testimonials.jpg"
+                                        alt=""
+                                        class="testimonials-evaluate__avatar"
+                                    />
+                                    <div class="testimonials-evaluate__person">
+                                        <div
+                                            class="testimonials-evaluate__name"
+                                        >
+                                            Barbara D. Smith
+                                        </div>
+                                        <div
+                                            class="testimonials-evaluate__starts"
+                                        >
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                            <img
+                                                src="./assets/icon/start-none.svg"
+                                                alt=""
+                                                class="testimonials-evaluate__start"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="testimonials-border__list">
-                        <div class="testimonials-border__item"></div>
+                        <div class="testimonials-border__item active"></div>
                         <div class="testimonials-border__item"></div>
                         <div class="testimonials-border__item"></div>
                     </div>

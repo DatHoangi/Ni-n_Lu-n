@@ -63,47 +63,50 @@
         top: 75px;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
         z-index: -1;
+        border-radius: 0px 0px 715px 715px;
+        background: linear-gradient(
+            180deg,
+            rgba(76, 201, 240, 0) 0%,
+            rgba(67, 97, 238, 0.3) 100%
+        );
 
         @include abstracts.screen(xl) {
-            width: 1000px;
-            height: 970px;
+            height: 900px;
         }
 
         @include abstracts.screen(lg) {
-            width: 800px;
-            height: 940px;
+            height: 1140px;
         }
 
         @include abstracts.screen(md) {
-            width: 700px;
-            height: 920px;
+            height: 1140px;
         }
         @include abstracts.screen(sm) {
-            width: 394px;
             height: 894px;
+            border-radius: 0px 0px 800px 800px;
         }
     }
 
     &__decor-img {
-        top: 69%;
-        left: 44%;
+        top: 500px;
+        left: 47%;
         z-index: -1;
         height: auto;
         @include abstracts.screen(xl) {
             left: 55%;
         }
         @include abstracts.screen(lg) {
-            left: 78%;
-            top: 79%;
+            left: 73%;
         }
         @include abstracts.screen(md) {
-            left: 80%;
-            top: 71%;
+            left: 79%;
+            top: 450px;
         }
         @include abstracts.screen(sm) {
-            left: 80%;
-            top: 73%;
+            left: 65%;
+            top: 425px;
         }
     }
 
@@ -119,6 +122,11 @@
 
         @include abstracts.screen(lg) {
             margin-top: 50px;
+        }
+        @include abstracts.screen(sm) {
+            width: 333px;
+            height: 480px;
+            border-radius: 20px;
         }
     }
 
@@ -141,7 +149,8 @@
             width: 355px;
         }
         @include abstracts.screen(sm) {
-            width: 400px;
+            padding: 0 22px 40px;
+            width: 333px;
         }
         @include abstracts.screen(xs) {
             width: 333px;
@@ -157,6 +166,7 @@
         border-radius: 20px 20px 0 0;
         background: #fff;
         @include abstracts.screen(sm) {
+            height: 60px;
             gap: 68px;
         }
     }
@@ -187,6 +197,7 @@
         @include abstracts.screen(sm) {
             width: 100px;
             left: -20px;
+            bottom: -100%;
         }
     }
 
@@ -203,6 +214,7 @@
         outline: none;
         background: #d4d4d433;
         @include abstracts.screen(sm) {
+            padding: 20px;
             width: 290px;
         }
     }
@@ -236,6 +248,8 @@
         background-position: right 26px center;
         @include abstracts.screen(sm) {
             width: 290px;
+            padding: 20px;
+            border-radius: 10px;
         }
     }
 
@@ -259,6 +273,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include abstracts.screen(sm) {
+            margin-top: 40px;
+        }
     }
 
     &__from-icon-search {
@@ -281,7 +298,107 @@
         padding: 30px 60px;
         line-height: 24px;
         @include abstracts.screen(sm) {
+            padding: 15px;
             width: 290px;
+            height: 50px;
         }
     }
+}
+
+// slide show
+.slide-show-container {
+    position: relative;
+    margin-top: 40px;
+    width: 540px; /* Độ rộng của ảnh */
+    height: auto; /* Chiều cao tự động để chứa ảnh */
+    @include abstracts.screen(sm) {
+        margin-top: 46px;
+        width: 333px;
+    }
+}
+
+.slide-show {
+    width: 540px;
+    overflow: hidden;
+    @include abstracts.screen(sm) {
+        width: 333px;
+    }
+}
+.list-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image {
+    width: 540px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    @include abstracts.screen(sm) {
+        width: 333px;
+    }
+}
+
+.btn-image:hover {
+    cursor: pointer;
+}
+.btn-image {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #fff;
+    box-shadow: 4px 10px 30px 0px #0000001a;
+}
+
+.btn-left {
+    left: -4%;
+    @include abstracts.screen(sm) {
+        left: 0%;
+    }
+}
+
+.btn-right {
+    top: 44%;
+    transform: rotate(-180deg);
+    right: -4%;
+    @include abstracts.screen(sm) {
+        top: 42%;
+        right: 0%;
+    }
+}
+
+// dot
+.dots-image {
+    position: absolute;
+    display: flex;
+    bottom: -13px;
+    left: 50%;
+    gap: 39px;
+    transform: translateX(-50%);
+    @include abstracts.screen(sm) {
+        gap: 22px;
+    }
+}
+
+.dot-item {
+    width: 100px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0);
+    @include abstracts.screen(sm) {
+        width: 58px;
+    }
+}
+
+.dot-active {
+    background: #4361ee;
+    border-color: #4361ee;
 }
