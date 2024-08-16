@@ -184,10 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function startSlideInterval() {
-        // Clear existing interval if any
         clearInterval(slideInterval);
-
-        // Start new interval
         slideInterval = setInterval(() => {
             current = (current + 1) % length;
             updateSlidePosition();
@@ -197,19 +194,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".btn-left").addEventListener("click", () => {
         current = current === 0 ? length - 1 : current - 1;
         updateSlidePosition();
-        startSlideInterval(); // Reset the interval on button click
+        startSlideInterval();
     });
 
     document.querySelector(".btn-right").addEventListener("click", () => {
         current = (current + 1) % length;
         updateSlidePosition();
-        startSlideInterval(); // Reset the interval on button click
+        startSlideInterval();
     });
 
-    // Start the initial interval
-    startSlideInterval();
+    window.addEventListener("resize", () => {
+        width = imgs[0].offsetWidth; // Cập nhật width khi kích thước màn hình thay đổi
+        updateSlidePosition();
+    });
 
-    // Initial update of dots on page load
+    startSlideInterval();
     updateDots();
 });
 

@@ -2258,7 +2258,7 @@ select {
   color: rgba(109, 106, 117, 0.5019607843);
   background-color: rgba(212, 212, 212, 0.2);
   appearance: none;
-  background-image: url(/assets/icon/arrow.svg);
+  background-image: url(./assets/icon/arrow.svg);
   background-repeat: no-repeat;
   background-position: right 26px center;
 }
