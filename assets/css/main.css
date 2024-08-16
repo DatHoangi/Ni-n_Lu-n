@@ -1608,11 +1608,16 @@ select {
 .navbar {
   margin-right: 129px;
 }
+@media (max-width: 575.98px) {
+  .navbar {
+    margin-right: 0;
+  }
+}
 @media (max-width: 991.98px) {
   .navbar {
     display: block;
     position: fixed;
-    inset: 6.7% 40% 0 0;
+    inset: -0.3% 40% 0 0;
     background: #fff;
     padding: 20px 0;
     z-index: 9;
@@ -2212,7 +2217,7 @@ select {
   .hero__form-label-sale::after {
     width: 100px;
     left: -20px;
-    bottom: -100%;
+    bottom: -105%;
   }
 }
 .hero__form-input {
@@ -2436,6 +2441,77 @@ select {
 .dot-active {
   background: #4361ee;
   border-color: #4361ee;
+}
+
+/* Container for the custom select */
+.custom-select {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  background: rgba(212, 212, 212, 0.2);
+  text-align: left;
+  padding: 24px 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 26px;
+  color: rgba(109, 106, 117, 0.5019607843);
+}
+
+/* Trigger for custom select */
+.custom-select-trigger {
+  display: block;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and width are calculated correctly */
+}
+
+/* Options dropdown */
+.custom-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Each option */
+.custom-option {
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  color: rgba(109, 106, 117, 0.5019607843);
+  cursor: pointer;
+}
+
+/* Hover effect for options */
+.custom-option:hover {
+  background: #f0f0f0;
+}
+
+/* Selected option style */
+.custom-option.selected {
+  background: #3a0ca3;
+  color: #fff;
+}
+
+/* Active class for displaying options */
+.custom-select .active {
+  display: block;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .form__evaluate {

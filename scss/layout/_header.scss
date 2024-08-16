@@ -110,11 +110,14 @@
 
 .navbar {
     margin-right: 129px;
+    @include abstracts.screen(sm) {
+        margin-right: 0;
+    }
 
     @include abstracts.screen(lg) {
         display: block;
         position: fixed;
-        inset: 6.7% 40% 0 0;
+        inset: -0.3% 40% 0 0;
         background: #fff;
         padding: 20px 0;
         z-index: 9;

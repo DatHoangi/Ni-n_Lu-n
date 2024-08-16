@@ -196,36 +196,123 @@
                                 />
                             </div>
                             <div class="hero__form-section">
-                                <select
-                                    id="property-type"
-                                    name="property-type"
-                                    class="hero__form-type"
+                                <div
+                                    class="custom-select"
+                                    id="property-type-select"
                                 >
-                                    <option value="" disabled selected>
+                                    <span class="custom-select-trigger">
                                         Select Property Type
-                                    </option>
-                                    <option value="house">House</option>
-                                    <option value="apartment">Apartment</option>
-                                    <option value="condo">Condo</option>
-                                    <option value="land">Land</option>
-                                </select>
+                                        <svg
+                                            width="14"
+                                            height="7"
+                                            viewBox="0 0 14 7"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.58521 6.57766C7.23581 6.82982 6.76419 6.82982 6.41479 6.57767L0.848983 2.56089C0.0621447 1.99304 0.46384 0.750001 1.43419 0.750001L12.5658 0.75C13.5362 0.75 13.9379 1.99303 13.151 2.56088L7.58521 6.57766Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </svg>
+                                    </span>
+
+                                    <div class="custom-options">
+                                        <div
+                                            class="custom-option"
+                                            data-value=""
+                                        >
+                                            Select Property Type
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="house"
+                                        >
+                                            House
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="apartment"
+                                        >
+                                            Apartment
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="condo"
+                                        >
+                                            Condo
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="land"
+                                        >
+                                            Land
+                                        </div>
+                                    </div>
+                                    <input
+                                        type="hidden"
+                                        id="property-type"
+                                        name="property-type"
+                                    />
+                                </div>
                             </div>
 
                             <div class="hero__form-section">
-                                <select
-                                    id="rooms"
-                                    name="rooms"
-                                    class="hero__form-type"
-                                >
-                                    <option value="" disabled selected>
+                                <div class="custom-select" id="rooms-select">
+                                    <span class="custom-select-trigger">
                                         Select Rooms
-                                    </option>
-                                    <option value="1">1 Rooms</option>
-                                    <option value="2">2 Rooms</option>
-                                    <option value="3">3 Rooms</option>
-                                    <option value="4">4 Rooms</option>
-                                </select>
+                                        <svg
+                                            width="14"
+                                            height="7"
+                                            viewBox="0 0 14 7"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.58521 6.57766C7.23581 6.82982 6.76419 6.82982 6.41479 6.57767L0.848983 2.56089C0.0621447 1.99304 0.46384 0.750001 1.43419 0.750001L12.5658 0.75C13.5362 0.75 13.9379 1.99303 13.151 2.56088L7.58521 6.57766Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <div class="custom-options">
+                                        <div
+                                            class="custom-option"
+                                            data-value=""
+                                        >
+                                            Select Rooms
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="1"
+                                        >
+                                            Cozy Studio
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="2"
+                                        >
+                                            Charming 1-Bedroom
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="3"
+                                        >
+                                            Spacious 2-Bedroom
+                                        </div>
+                                        <div
+                                            class="custom-option"
+                                            data-value="4"
+                                        >
+                                            Generous 3-Bedroom
+                                        </div>
+                                    </div>
+                                    <input
+                                        type="hidden"
+                                        id="rooms"
+                                        name="rooms"
+                                    />
+                                </div>
                             </div>
+
                             <div class="hero__form-search">
                                 <img
                                     src="./assets/icon/search.svg"

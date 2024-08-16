@@ -212,6 +212,77 @@ document.addEventListener("DOMContentLoaded", () => {
     updateDots();
 });
 
+// Hero form
+document.addEventListener("DOMContentLoaded", () => {
+    // Lấy tất cả các custom-select
+    const customSelects = document.querySelectorAll(".custom-select");
+
+    customSelects.forEach((customSelect) => {
+        // Lấy các phần tử cần thiết
+        const selectTrigger = customSelect.querySelector(
+            ".custom-select-trigger"
+        );
+        const optionsContainer = customSelect.querySelector(".custom-options");
+        const options = customSelect.querySelectorAll(".custom-option");
+        const hiddenSelect = customSelect.querySelector('input[type="hidden"]');
+
+        // Kiểm tra nếu hiddenSelect không phải là null
+        if (hiddenSelect === null) {
+            console.error("Hidden select input not found.");
+            return;
+        }
+
+        // Mở/đóng menu khi nhấp vào trigger
+        selectTrigger.addEventListener("click", () => {
+            optionsContainer.classList.toggle("active");
+        });
+
+        // Xử lý khi chọn một tùy chọn
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                // Cập nhật giá trị và nội dung của dropdown
+                const value = option.getAttribute("data-value");
+                hiddenSelect.value = value;
+
+                // Cập nhật nội dung của trigger, giữ SVG
+                selectTrigger.innerHTML = `
+                    ${option.textContent}
+                    <svg
+                        width="14"
+                        height="7"
+                        viewBox="0 0 14 7"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7.58521 6.57766C7.23581 6.82982 6.76419 6.82982 6.41479 6.57767L0.848983 2.56089C0.0621447 1.99304 0.46384 0.750001 1.43419 0.750001L12.5658 0.75C13.5362 0.75 13.9379 1.99303 13.151 2.56088L7.58521 6.57766Z"
+                            fill="#AAAAAA"
+                        />
+                    </svg>
+                `;
+
+                // Đánh dấu tùy chọn đã chọn
+                options.forEach((opt) => opt.classList.remove("selected"));
+                option.classList.add("selected");
+
+                // Đóng menu
+                optionsContainer.classList.remove("active");
+            });
+        });
+    });
+
+    // Đóng tất cả các dropdown khi nhấp ra ngoài
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".custom-select")) {
+            document
+                .querySelectorAll(".custom-options.active")
+                .forEach((activeOptions) => {
+                    activeOptions.classList.remove("active");
+                });
+        }
+    });
+});
+
 // Blog
 document.addEventListener("DOMContentLoaded", () => {
     let listItems = document.querySelectorAll(".blog__list-item .blog-list");
